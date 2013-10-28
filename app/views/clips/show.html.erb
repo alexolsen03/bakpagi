@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Path:</strong>
+  <%= @clip.path %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @clip.category %>
+</p>
+
+<p>
+  <strong>Level:</strong>
+  <%= @clip.level %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @clip.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @clip.description %>
+</p>
+
+<%= link_to 'Edit', edit_clip_path(@clip) %> |
+<%= link_to 'Back', clips_path %>

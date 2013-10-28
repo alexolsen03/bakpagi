@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  path: MyString
+  category: MyString
+  level: 1
+  title: MyString
+  description: MyString
+
+two:
+  path: MyString
+  category: MyString
+  level: 1
+  title: MyString
+  description: MyString

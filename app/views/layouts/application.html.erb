@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bakpagi</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<%= render "layouts/header" %>
+<div class="wrapper">
+	<div class="inner-wrapper">
+		<%= render "layouts/leftsec" %>
+		<div class="content">
+			<%= render "layouts/cats" %>
+			<div class="inner-content">
+				<%= yield %>
+			</div>
+			<div class="clearme"></div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

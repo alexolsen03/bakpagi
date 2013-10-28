@@ -1,0 +1,181 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+$leftWidth: 100px;
+$enhanceColor: #fff;
+$primaryColor: #80BCA3;
+$secColor: #888;//#BF4D28;
+$thirdColor: #F6F7BD;
+$darkColor: #655643;
+$mainWidth: 1200px;
+$catHeight: 528px; //(height of each li + 24 padding) * the number of li categories
+$difLevelHeight: 152px; //$catHeight / 3 - (12 padding per item)
+
+body{
+	background-image: url('/assets/backgrounds/billie_holiday.png');
+}
+
+div.wrapper{
+	
+	div.inner-wrapper{
+		width: $mainWidth;
+		margin: 0px auto;
+	}
+}
+
+div.header-banner{
+	border-bottom: 2px solid $thirdColor;
+	background-color: #bf4d28;
+	box-shadow: 2px 2px 3px #666;
+	margin-bottom: 18px;
+
+	div.inner-wrapper{
+		padding: 12px 0px;
+
+		h1{
+			font-size: 26px;
+			font-weight: bold;
+			color: #E6AC27;
+		}
+	}
+}
+
+div.content{
+	float: left;
+	background-color: $darkColor;
+	padding: 8px 8px 8px 0px;
+	min-height: $catHeight;
+
+	div.inner-content{
+		float: left;
+		background-color: $enhanceColor;
+		height: 500px;
+		width: 960px;
+		padding: 8px;
+	}
+}
+
+div.bg-vert{
+	// background: #80bca3; /* Old browsers */
+	// background: -moz-linear-gradient(top, #80bca3 0%, #9ee5ce 41%, #ffffff 100%); /* FF3.6+ */
+	// background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#80bca3), color-stop(41%,#9ee5ce), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+	// background: -webkit-linear-gradient(top, #80bca3 0%,#9ee5ce 41%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+	// background: -o-linear-gradient(top, #80bca3 0%,#9ee5ce 41%,#ffffff 100%); /* Opera 11.10+ */
+	// background: -ms-linear-gradient(top, #80bca3 0%,#9ee5ce 41%,#ffffff 100%); /* IE10+ */
+	// background: linear-gradient(to bottom, #80bca3 0%,#9ee5ce 41%,#ffffff 100%); /* W3C */
+	// filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80bca3', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+	//background-color: #655643;
+	//box-shadow: 2px 1px 3px #e6e6e7;
+}
+
+ul.cat-holder-hor{
+	width: $leftWidth;
+	height: $catHeight;
+	float: left;
+
+	li{
+		display: block;
+		text-align: center;
+		padding: 18px 4px;
+	}
+
+	li.active{
+		border-right: 1px solid transparent;
+		background-color: $enhanceColor;
+		box-shadow: 2px 2px 3px #555;
+		border-radius: 4px 0px 0px 4px;
+	}
+
+	li:hover{
+		cursor: pointer;
+	}
+}
+
+div.clip-wrapper{
+	border: 4px solid $primaryColor;
+	border-radius: 4px;
+	display: inline-block;
+	//background-color: rgba(128,188,163, 0.7);
+	box-shadow: 1px 1px 3px #e6e6e7;
+
+	div.clip-inner{
+		width: 190px;
+		text-align: center;
+
+		h1{
+			color: $secColor;
+			font-weight: bold;
+			font-size: 14px;
+			text-align: center;
+			padding: 4px;
+		}
+
+		img{
+			height: 90px;
+			//width: 140px;
+		}
+
+		p{
+			padding: 4px;
+			color: $secColor;
+			text-align: left;
+			font-size: 10pt;
+			font-family: Calibri;
+		}
+
+		div.icon-holder{
+			text-align: right;
+			padding: 4px;
+
+			div.left-holder{
+				float: left;
+
+				img{
+					height: 16px;
+					width: 16px;
+				}
+			}
+
+			div.right-holder{
+				float: right;
+
+				img{
+					height: 16px;
+					width: 16px;
+				}
+			}
+		}
+	}
+}
+
+div.clip-wrapper:hover{
+	cursor: pointer;
+	background-color: $thirdColor;
+}
+
+div.left-wrapper{
+	width: 100px;
+	float: left;
+
+	div.go-left{
+
+		ul{
+
+			li{
+				height: $difLevelHeight;
+				line-height: 164px;
+			}
+
+			li.active{			
+				background-color: $darkColor;
+			}
+		}
+	}
+
+	div.go-right{
+
+		ul{
+			background-color: $darkColor;
+		}
+	}
+}
