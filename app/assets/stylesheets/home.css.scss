@@ -1,7 +1,7 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-$leftWidth: 100px;
+$leftWidth: 48px;
 $enhanceColor: #fff;
 $primaryColor: #80BCA3;
 $secColor: #888;//#BF4D28;
@@ -9,17 +9,21 @@ $thirdColor: #F6F7BD;
 $darkColor: #655643;
 $mainWidth: 1200px;
 $catHeight: 528px; //(height of each li + 24 padding) * the number of li categories
-$difLevelHeight: 152px; //$catHeight / 3 - (12 padding per item)
+$difLevelHeight: 92px; //$catHeight / 3 - (12 padding per item)
+$shadow: #444;
 
 body{
-	background-image: url('/assets/backgrounds/billie_holiday.png');
+	background: url('/assets/backgrounds/tree_bark.png');
+//	background-color: $enhanceColor;
 }
 
 div.wrapper{
 	
 	div.inner-wrapper{
+		position: relative;
 		width: $mainWidth;
 		margin: 0px auto;
+		z-index: 10;
 	}
 }
 
@@ -42,115 +46,116 @@ div.header-banner{
 
 div.content{
 	float: left;
-	background-color: $darkColor;
-	padding: 8px 8px 8px 0px;
-	min-height: $catHeight;
 
-	div.inner-content{
+	#col1{
+		padding-left: 54px;
+	}
+
+	div.col{
+		width: 300px;
+		text-align: center;
+		padding: 8px 0px;
 		float: left;
-		background-color: $enhanceColor;
-		height: 500px;
-		width: 960px;
-		padding: 8px;
+
+		div.clip-wrapper{
+			//border: 4px solid $primaryColor;
+			border-radius: 4px;
+			display: inline-block;
+			//box-shadow: -2px 2px 3px #888;
+			border-left: 2px solid #ececec;
+			border-bottom: 2px solid #ececec;
+			border-top: 2px solid #fafafa;
+			border-right: 2px solid #fafafa;
+			margin-bottom: 54px;
+			background-color: #fff;
+
+			div.clip-inner{
+				width: 190px;
+				text-align: center;
+
+				h1{
+					color: $secColor;
+					font-weight: bold;
+					font-size: 14px;
+					text-align: center;
+					padding: 4px;
+				}
+
+				img{
+					height: 90px;
+					//width: 140px;
+				}
+
+				p{
+					padding: 4px;
+					color: $secColor;
+					text-align: left;
+					font-size: 10pt;
+					font-family: Calibri;
+				}
+
+				div.icon-holder{
+					text-align: right;
+					padding: 4px;
+
+					div.left-holder{
+						float: left;
+
+						img{
+							height: 16px;
+							width: 16px;
+						}
+					}
+
+					div.right-holder{
+						float: right;
+
+						img{
+							height: 16px;
+							width: 16px;
+						}
+					}
+				}
+			}
+		}
+
+		div.clip-wrapper:hover{
+			cursor: pointer;
+			//background-color: $thirdColor;
+			border-left: 2px solid #fafafa;
+			border-bottom: 2px solid #fafafa;
+			box-shadow: 2px 2px 3px #bbb;
+		}
 	}
 }
 
-div.bg-vert{
-	// background: #80bca3; /* Old browsers */
-	// background: -moz-linear-gradient(top, #80bca3 0%, #9ee5ce 41%, #ffffff 100%); /* FF3.6+ */
-	// background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#80bca3), color-stop(41%,#9ee5ce), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
-	// background: -webkit-linear-gradient(top, #80bca3 0%,#9ee5ce 41%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
-	// background: -o-linear-gradient(top, #80bca3 0%,#9ee5ce 41%,#ffffff 100%); /* Opera 11.10+ */
-	// background: -ms-linear-gradient(top, #80bca3 0%,#9ee5ce 41%,#ffffff 100%); /* IE10+ */
-	// background: linear-gradient(to bottom, #80bca3 0%,#9ee5ce 41%,#ffffff 100%); /* W3C */
-	// filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80bca3', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
-	//background-color: #655643;
-	//box-shadow: 2px 1px 3px #e6e6e7;
-}
-
 ul.cat-holder-hor{
-	width: $leftWidth;
-	height: $catHeight;
+	//height: $catHeight;
 	float: left;
 
 	li{
 		display: block;
 		text-align: center;
-		padding: 18px 4px;
+		padding: 18px 10px;
+		border-radius: 8px 0px 0px 8px;
+
+		img{
+			height: 28px;
+			width: 28px;
+		}
 	}
 
 	li.active{
 		border-right: 1px solid transparent;
 		background-color: $enhanceColor;
-		box-shadow: 2px 2px 3px #555;
-		border-radius: 4px 0px 0px 4px;
+		box-shadow: 1px 3px 3px #555;
+		box-shadow: -2px 2px 3px $shadow;
+		position: relative;
 	}
 
 	li:hover{
 		cursor: pointer;
 	}
-}
-
-div.clip-wrapper{
-	border: 4px solid $primaryColor;
-	border-radius: 4px;
-	display: inline-block;
-	//background-color: rgba(128,188,163, 0.7);
-	box-shadow: 1px 1px 3px #e6e6e7;
-
-	div.clip-inner{
-		width: 190px;
-		text-align: center;
-
-		h1{
-			color: $secColor;
-			font-weight: bold;
-			font-size: 14px;
-			text-align: center;
-			padding: 4px;
-		}
-
-		img{
-			height: 90px;
-			//width: 140px;
-		}
-
-		p{
-			padding: 4px;
-			color: $secColor;
-			text-align: left;
-			font-size: 10pt;
-			font-family: Calibri;
-		}
-
-		div.icon-holder{
-			text-align: right;
-			padding: 4px;
-
-			div.left-holder{
-				float: left;
-
-				img{
-					height: 16px;
-					width: 16px;
-				}
-			}
-
-			div.right-holder{
-				float: right;
-
-				img{
-					height: 16px;
-					width: 16px;
-				}
-			}
-		}
-	}
-}
-
-div.clip-wrapper:hover{
-	cursor: pointer;
-	background-color: $thirdColor;
 }
 
 div.left-wrapper{
@@ -163,7 +168,7 @@ div.left-wrapper{
 
 			li{
 				height: $difLevelHeight;
-				line-height: 164px;
+				line-height: 128px;
 			}
 
 			li.active{			
@@ -178,4 +183,112 @@ div.left-wrapper{
 			background-color: $darkColor;
 		}
 	}
+}
+
+div.left-col{
+	float: left;
+	position: fixed;
+//	background-image: url('/assets/backgrounds/billie_holiday.png');
+
+	#logo{
+		position: absolute;
+		left: -60px;
+		top: 0px;
+		height: 150px;
+	}
+
+	div.logo-wrapper{
+
+		div{
+			width: 69px;
+			height: 80px;
+		}
+
+		div.brown-me{
+			background-color: $darkColor;
+			box-shadow: -2px 2px 3px $shadow;
+		}
+	}
+
+	div.go-left{
+
+		ul{
+			li{
+				padding: 30px 18px;
+			}
+		}
+
+		ul.cats{
+			background-color: $darkColor;
+			padding-left: 4px;
+			box-shadow: -2px 2px 3px $shadow;
+			height: 806px;
+
+			li{
+
+				img{
+					height: 28px;
+					width: 28px;
+				}
+			}
+
+			li:active{
+				background-color: $enhanceColor;
+				box-shadow: -2px 2px 3px $shadow;
+				position: relative;
+			}
+		}
+
+		ul.levels{
+			margin-top: 140px;
+
+			li{
+
+				img{
+					height: 32px;
+					width: 32px;
+				}
+			}
+
+			li.active{
+				background-color: $darkColor;
+			}
+		}
+
+	}
+
+}
+
+div.right-col{
+	float: left;
+	background-color: $enhanceColor;
+//	height: 750px;
+	width: 1000px;
+	box-shadow: -2px 2px 3px $shadow;
+	margin-left: 138px;
+}
+
+div.modal{
+	display: none;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0,0,0,0.6);
+	z-index: 99;
+
+}
+
+div.modal-inner{
+	display: none;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-top: -200px;
+	margin-left: -400px;
+	width: 800px;
+	height: 400px;
+	background-color: white;
+	z-index: 100;
 }

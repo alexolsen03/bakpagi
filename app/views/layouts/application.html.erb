@@ -7,9 +7,31 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= render "layouts/header" %>
+<!-- <%= render "layouts/header" %> -->
+<%= render "layouts/modal" %>
 <div class="wrapper">
+	<div class="right-bg"></div>
 	<div class="inner-wrapper">
+	<div class="left-col">
+		<img id='logo' src="/assets/logo-meh.png"/>
+		<div class="logo-wrapper">
+			<div class="go-left">
+			</div>
+			<div class="go-left brown-me"></div>
+			<div class="clear-me"></div>
+		</div>
+		<%= render "layouts/leftsec" %>
+		<%= render "layouts/cats" %>
+		<div class="clearme"></div>
+	</div>
+	<div class="right-col">
+		<div class="content">
+			<%= yield %>
+		</div>
+	</div>
+	<div class="clearme"></div>
+
+		<!--
 		<%= render "layouts/leftsec" %>
 		<div class="content">
 			<%= render "layouts/cats" %>
@@ -18,6 +40,7 @@
 			</div>
 			<div class="clearme"></div>
 		</div>
+		-->
 	</div>
 </div>
 

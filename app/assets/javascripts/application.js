@@ -14,3 +14,60 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function(){
+
+	$("ul.levels li").click(function(){
+
+		$("ul.levels li").each(function(){
+	        if($(this).hasClass('active')){
+                $(this).removeClass('active');
+                var img = $(this).children()[0];
+				var fullPathArr = $(img).attr('src').split('.');
+				var imgPath = fullPathArr[0].split('-y');
+				var activePath = imgPath[0] + '-g.' + fullPathArr[1];
+				$(img).attr('src', activePath);
+	        }
+		});
+
+		$(this).addClass('active');
+		var img = $(this).children()[0];
+		var fullPathArr = $(img).attr('src').split('.');
+		var imgPath = fullPathArr[0].split('-g');
+		var activePath = imgPath[0] + '-y';
+		$(img).attr('src', activePath + '.' + fullPathArr[1]);
+	});
+
+	$("ul.cats li").click(function(){
+
+		$("ul.cats li").each(function(){
+	        if($(this).hasClass('active')){
+                $(this).removeClass('active');
+                var img = $(this).children()[0];
+				var fullPathArr = $(img).attr('src').split('.');
+				var imgPath = fullPathArr[0].split('-b');
+				var activePath = imgPath[0] + '-y.' + fullPathArr[1];
+				$(img).attr('src', activePath);
+	        }
+		});
+
+		$(this).addClass('active');
+		var img = $(this).children()[0];
+		var fullPathArr = $(img).attr('src').split('.');
+		var imgPath = fullPathArr[0].split('-y');
+		var activePath = imgPath[0] + '-b';
+		$(img).attr('src', activePath + '.' + fullPathArr[1]);
+	});
+
+
+	$("div.clip-inner").click(function(){
+		$("div.modal").css('display', 'block');
+		$("div.modal-inner").css('display', 'block');
+
+		$("div.modal").click(function(){
+			$("div.modal").css('display', 'none');
+			$("div.modal-inner").css('display', 'none');
+		});
+	});
+
+});

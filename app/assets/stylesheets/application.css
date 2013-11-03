@@ -71,3 +71,14 @@ table {
 .go-right{
 	float: right;
 }
+
+.right-bg{
+	position: fixed;
+    top: 0px;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    background-color: white; 
+    background-image: url('/assets/backgrounds/tree_bark.png'); 
+    z-index: 1;
+}
