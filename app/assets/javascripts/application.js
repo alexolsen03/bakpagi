@@ -64,6 +64,8 @@ $(document).ready(function(){
 		$("div.modal").css('display', 'block');
 		$("div.modal-inner").css('display', 'block');
 
+		var src = $(this).children()[0];
+		$("#ytplayer").attr('src', $(src).html().trim());
 		$("div.modal").click(function(){
 			$("div.modal").css('display', 'none');
 			$("div.modal-inner").css('display', 'none');

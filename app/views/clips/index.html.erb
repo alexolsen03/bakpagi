@@ -3,8 +3,9 @@
 <table>
   <thead>
     <tr>
-      <th>Path</th>
-      <th>Category</th>
+      <th>VidUrlPath</th>
+      <th>EngSubsUrlPath</th>
+      <th>KorSubsUrlPath</th>
       <th>Level</th>
       <th>Title</th>
       <th>Description</th>
@@ -17,9 +18,9 @@
   <tbody>
     <% @clips.each do |clip| %>
       <tr>
-        <td><%= clip.path %></td>
-        <td><%= clip.category %></td>
-        <td><%= clip.level %></td>
+        <td><%= clip.vid_url_path %></td>
+        <td><%= clip.eng_subs_url_path %></td>
+        <td><%= clip.kor_subs_url_path %></td>
         <td><%= clip.title %></td>
         <td><%= clip.description %></td>
         <td><%= link_to 'Show', clip %></td>

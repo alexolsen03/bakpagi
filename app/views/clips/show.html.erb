@@ -1,13 +1,19 @@
 <p id="notice"><%= notice %></p>
-
+	id:<%=Clip.find(1).vid_url_path %>
+	<%= Clip.column_names %>
 <p>
-  <strong>Path:</strong>
-  <%= @clip.path %>
+  <strong>VidUrlPath:</strong>
+  <%= @clip.vid_url_path %>
 </p>
 
 <p>
-  <strong>Category:</strong>
-  <%= @clip.category %>
+  <strong>EngSubsUrlPath:</strong>
+  <%= @clip.eng_subs_url_path %>
+</p>
+
+<p>
+  <strong>KorSubsUrlPath:</strong>
+  <%= @clip.kor_subs_url_path %>
 </p>
 
 <p>

@@ -10,14 +10,22 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :path %><br>
-    <%= f.text_field :path %>
+  <div>
+    <p>
+      <%= Clip.column_names %>
+    </p>
   </div>
   <div class="field">
-    <%= f.label :category %><br>
-    <%= f.text_field :category %>
+    <%= f.label :vidurlpath %><br>
+    <%= f.text_field :vid_url_path %>
+  </div>
+  <div class="field">
+    <%= f.label :eng_subs_url_path %><br>
+    <%= f.text_field :eng_subs_url_path %>
+  </div>
+  <div class="field">
+    <%= f.label :kor_subs_url_path %><br>
+    <%= f.text_field :kor_subs_url_path %>
   </div>
   <div class="field">
     <%= f.label :level %><br>

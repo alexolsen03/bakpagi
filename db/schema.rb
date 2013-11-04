@@ -11,16 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131026000533) do
+ActiveRecord::Schema.define(version: 20131104005226) do
 
   create_table "clips", force: true do |t|
-    t.string   "path"
-    t.string   "category"
     t.integer  "level"
     t.string   "title"
     t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "vid_url_path"
+    t.string   "eng_subs_url_path"
+    t.string   "kor_subs_url_path"
   end
 
 end
