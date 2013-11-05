@@ -65,7 +65,11 @@ $(document).ready(function(){
 		$("div.modal-inner").css('display', 'block');
 
 		var src = $(this).children()[0];
-		$("#ytplayer").attr('src', $(src).html().trim());
+		var player = document.getElementById("ytplayer");
+	//	$("#ytplayer").attr('src', $(src).html().trim());
+		player.src = $(src).html().trim();
+		player.src = player.src;
+		player = player;
 		$("div.modal").click(function(){
 			$("div.modal").css('display', 'none');
 			$("div.modal-inner").css('display', 'none');
