@@ -1,5 +1,11 @@
 class HomeController < ApplicationController
+  before_action :set_clips
+
   def index
-  	@clips = Clip.all
+  end
+
+ private
+  def set_clips
+  	@clips = Clip.where(level: 1);
   end
 end
