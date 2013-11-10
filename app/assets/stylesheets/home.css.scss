@@ -130,12 +130,14 @@ ul.cat-holder-hor{
 	li{
 		display: block;
 		text-align: center;
-		padding: 18px 10px;
 		border-radius: 8px 0px 0px 8px;
 
-		img{
-			height: 28px;
-			width: 28px;
+		a{
+
+			img{
+				height: 28px;
+				width: 28px;
+			}
 		}
 	}
 
@@ -208,17 +210,26 @@ div.left-col{
 
 		ul{
 			li{
-				padding: 30px 18px;
+
+				a{
+					padding: 36px 20px;
+					display: inline-block;
+				}
+
+				a:hover{
+					background-color: transparent;
+				}
 			}
 		}
 
 		ul.cats{
 			background-color: $darkColor;
-			padding-left: 4px;
+			padding-left: 16px;
 			box-shadow: -2px 2px 3px $shadow;
 			height: 806px;
 
 			li{
+				padding: 18px 10px;
 
 				img{
 					height: 28px;
