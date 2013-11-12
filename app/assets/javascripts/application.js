@@ -67,22 +67,14 @@ $(document).ready(function(){
 
 	addClipPlayVideoListener();
 
-	// $("ul.levels li a").on("ajax:success", function(){
-	// 	alert("success!!");
-	// });
-
-	// $(document).ajaxSuccess(function(){
-	// 	alert("whoop");
-	// });
-
-	$("ul.levels li a").bind("ajax:success",
-        function(evt, data, status, xhr){
-            $("#col1").html(data);
-            addClipPlayVideoListener();
-   }).bind("ajax:error", 
-   		function(evt, data, status, xhr){
-            alert("Error retrieving data." + evt.responseText);
-   });
+	// $("ul.levels li a").bind("ajax:success",
+ //        function(evt, data, status, xhr){
+ //            $("#col1").html(data);
+ //            addClipPlayVideoListener();
+ //   }).bind("ajax:error", 
+ //   		function(evt, data, status, xhr){
+ //            alert("Error retrieving data." + evt.responseText);
+ //   });
 });
 
 function addClipPlayVideoListener(){

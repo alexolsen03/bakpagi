@@ -1,6 +1,5 @@
 class HomeController < ApplicationController
   before_action :set_clips
-  respond_to :html
 
   def index
   	uLevel = params[:uLevel]
@@ -11,6 +10,14 @@ class HomeController < ApplicationController
   		clips_response
   	end
   	#respond_with(@clips.where(level: uLevel))
+  end
+
+  def refresh_clips
+  	uLevel = params[:uLevel]
+  	@clips = Clip.where(level: uLevel)
+  	respond_to do |format|
+  		format.js
+  	end
   end
 
  private

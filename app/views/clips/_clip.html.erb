@@ -10,8 +10,13 @@
 		</p>
 		<div class="icon-holder">
 			<div class="left-holder">
-				<%= clip.level %>
-				<img src="/assets/cat-icons/intermediate-small.png"/>
+				<% if clip.level == 1 %>
+					<img src="/assets/cat-icons/easy-small.png"/>
+				<% elsif clip.level == 2 %>
+					<img src="/assets/cat-icons/intermediate-small.png"/>
+				<% else %>
+					<img src="/assets/cat-icons/hard-small.png"/>
+				<% end %>
 			</div>
 			<div class="right-holder">
 				<img src="/assets/cat-icons/bus-small.png"/>
