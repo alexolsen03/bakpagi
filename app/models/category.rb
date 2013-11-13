@@ -1,4 +1,4 @@
 class Category < ActiveRecord::Base
-	has_many :categorymaps
-	has_many :clips, through: :categorymaps
+	has_many :category_maps
+	has_many :clips, through: :category_maps
 end

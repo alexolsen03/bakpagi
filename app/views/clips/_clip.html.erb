@@ -19,8 +19,10 @@
 				<% end %>
 			</div>
 			<div class="right-holder">
-				<img src="/assets/cat-icons/bus-small.png"/>
-				<img src="/assets/cat-icons/heart-small.png"/>
+				<%clip.categories.each do |cat|  %>
+					<% delim_path = cat.path.split('-y.')[0] + '-small.png' %>
+					<%= image_tag(delim_path) %>
+				<% end %>
 			</div>
 			<div class="clearme"></div>
 		</div>
