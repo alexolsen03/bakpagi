@@ -16,6 +16,8 @@ class HomeController < ApplicationController
 
   	@clips = Clip.where(level: @uLevel)
  	@clips = @clips.joins(:categories).where('categories.id' => @uCat)
+ 	@clipsCount = @clips.count()
+ 	puts 'controller count is: ' + @clipsCount.to_s
   	respond_to do |format|
   		format.js
   	end
@@ -27,11 +29,7 @@ class HomeController < ApplicationController
   	puts "set it yooooo"
   	@uLevel = 1
   	@uCat = 1
+  	@clipCount = @clips.count();
   end
 
-  def clips_response
-  	respond_to do |format|
-  		format.html { render @clips }
-  	end
-  end
 end

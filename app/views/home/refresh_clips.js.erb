@@ -1,4 +1,4 @@
-$("#col1").html("<%= escape_javascript render(@clips) %>");
+$("div.content").html("<%= escape_javascript render('layouts/cols') %>" + "<div class='clearme'></div>");
 
 $("ul.levels li a").each(function(){
 	console.log("boop");

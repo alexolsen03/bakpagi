@@ -1,0 +1,16 @@
+<% puts 'count is ' + @clipsCount.to_s %>
+<% puts 'div is ' + (@clipsCount.to_f / 3).ceil.to_s %>
+<% if (@clipsCount.to_f / 3).ceil > 0 %>
+	<% puts 'count is ' + (@clipsCount.to_f / 3).ceil.to_s + ' is greater than zero' %>
+	<%= @clips.in_groups_of((@clipsCount.to_f / 3).ceil, false) do |clips| %>
+		<div class="col">
+			<% for clip in clips %>
+				<%= render clip %>
+			<% end %>
+		</div>
+	<% end %>
+<% else %>
+	<div class="col"></div>
+	<div class="col"></div>
+	<div class="col"></div>
+<% end %>

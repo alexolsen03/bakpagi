@@ -1,12 +1,22 @@
-insert into clips values ('1','1','beg title', 'this is a beginner videeo desc', '','','//www.youtube.com/embed/9v38mVkUA_M','assets/subs/begtitle1/eng.srt','assets/subs/begtitle1/kor.srt');
-insert into clips values ('2','2','itermediate title', 'this is an intermediate videeo desc', '','','//www.youtube.com/embed/9v38mVkUA_M','assets/subs/inttitle1/eng.srt','assets/subs/inttitle1/kor.srt');
-insert into clips values ('3','3','advanced title','this is an advanced video desc','','','//www.youtube.com/embed/9v38mVkUA_M','assets/subs/advtitle1/eng.srt','assets/subs/advtitle1/kor.srt');
+insert into clips values ('1','1','beg title1', 'this is a beginner videeo desc', '','','//www.youtube.com/embed/9v38mVkUA_M','assets/subs/begtitle1/eng.srt','assets/subs/begtitle1/kor.srt');
+insert into clips values ('2','1','beg title2', 'this is a beginner videeo desc', '','','//www.youtube.com/embed/9v38mVkUA_M','assets/subs/begtitle1/eng.srt','assets/subs/begtitle1/kor.srt');
+insert into clips values ('3','1','beg title3', 'this is a beginner videeo desc', '','','//www.youtube.com/embed/9v38mVkUA_M','assets/subs/begtitle1/eng.srt','assets/subs/begtitle1/kor.srt');
+insert into clips values ('4','2','itermediate title', 'this is an intermediate videeo desc', '','','//www.youtube.com/embed/9v38mVkUA_M','assets/subs/inttitle1/eng.srt','assets/subs/inttitle1/kor.srt');
+insert into clips values ('5','3','advanced title','this is an advanced video desc','','','//www.youtube.com/embed/9v38mVkUA_M','assets/subs/advtitle1/eng.srt','assets/subs/advtitle1/kor.srt');
 
 insert into category_maps values ('1','1','1','','');
 insert into category_maps values ('2','1','2','','');
-insert into category_maps values ('3','2','4','','');
-insert into category_maps values ('4','2','5','','');
-insert into category_maps values ('5','3','5','','');
+insert into category_maps values ('3','2','1','','');
+insert into category_maps values ('4','2','2','','');
+insert into category_maps values ('5','3','1','','');
+insert into category_maps values ('6','3','2','','');
+
+insert into category_maps values ('7','4','4','','');
+insert into category_maps values ('8','4','5','','');
+
+insert into category_maps values ('10','5','4','','');
+insert into category_maps values ('11','5','5','','');
+
 
 
 insert into categories values ('1','food', '/assets/cat-icons/burger-y.png', 'assets/images/cat-icons/burger-b.png', '', '');
