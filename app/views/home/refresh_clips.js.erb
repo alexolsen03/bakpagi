@@ -1,2 +1,18 @@
 $("#col1").html("<%= escape_javascript render(@clips) %>");
-$("#cat-wrapper").html("<%= escape_javascript render 'layouts/cats' %>");
+
+$("ul.levels li a").each(function(){
+	console.log("boop");
+	var link = $(this).attr('href');
+	var linkArr = link.split('uCat');
+	var levParam = linkArr[1].split('&')[1];
+	console.log(linkArr[0] + '\n' + linkArr[1]);
+	var newlink = linkArr[0] + 'uCat=<%= escape_javascript @uCat %>&' + levParam;
+	console.log(newlink);
+	$(this).attr('href', newlink);
+});
+
+$("ul.cats li a").each(function(){
+	var link = $(this).attr('href');
+	var newlink = link.split('uLevel')[0] + 'uLevel=<%= escape_javascript @uLevel %>';
+	$(this).attr('href', newlink);
+});

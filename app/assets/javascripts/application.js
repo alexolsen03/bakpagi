@@ -45,7 +45,8 @@ $(document).ready(function(){
 		$("ul.cats li").each(function(){
 	        if($(this).hasClass('active')){
                 $(this).removeClass('active');
-                var img = $(this).children()[0];
+                var link = $(this).children()[0];
+                var img = $(link).children()[0];
 				var fullPathArr = $(img).attr('src').split('.');
 				var imgPath = fullPathArr[0].split('-b');
 				var activePath = imgPath[0] + '-y.' + fullPathArr[1];
@@ -54,15 +55,13 @@ $(document).ready(function(){
 		});
 
 		$(this).addClass('active');
-		var img = $(this).children()[0];
+		var link = $(this).children()[0];
+        var img = $(link).children()[0];
 		var fullPathArr = $(img).attr('src').split('.');
 		var imgPath = fullPathArr[0].split('-y');
 		var activePath = imgPath[0] + '-b';
 		$(img).attr('src', activePath + '.' + fullPathArr[1]);
 
-		$.ajax({
-			url: "/home/index"
-		});
 	});
 
 	addClipPlayVideoListener();

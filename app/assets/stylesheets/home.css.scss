@@ -229,12 +229,21 @@ div.left-col{
 			height: 806px;
 
 			li{
-				padding: 18px 10px;
 
-				img{
-					height: 28px;
-					width: 28px;
+				a{
+					padding: 18px 10px;
+					display: inline-block;
+
+					img{
+						height: 28px;
+						width: 28px;
+					}
 				}
+
+				a:hover{
+					background-color: transparent;
+				}
+
 			}
 
 			li:active{
