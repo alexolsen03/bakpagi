@@ -4,7 +4,7 @@
 			<%= clip.vid_url_path %>
 		</div>
 		<h1><%= clip.title %></h1>
-		<img src="/assets/thumbnails/koreantest1.jpg" />
+		<%= image_tag("http://i1.ytimg.com/vi/" + clip.vid_url_path.split("/").last + "/default.jpg") %>
 		<p>
 			<%= clip.description %>
 		</p>
@@ -20,7 +20,7 @@
 			</div>
 			<div class="right-holder">
 				<%clip.categories.each do |cat|  %>
-					<% delim_path = cat.path.split('-y.')[0] + '-small.png' %>
+					<% delim_path = cat.path.split('-y.')[0] + '-b.png' %>
 					<%= image_tag(delim_path) %>
 				<% end %>
 			</div>
