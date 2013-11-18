@@ -8,6 +8,8 @@ development:
   database: db/bakpagi_dev
   pool: 5
   timeout: 5000
+  username: postgres
+  password: code*03
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -17,9 +19,13 @@ test:
   database: db/bakpagi_test
   pool: 5
   timeout: 5000
+  username: postgres
+  password: code*03
 
 production:
   adapter: postgresql
   database: db/bakpagi_prod
   pool: 5
   timeout: 5000
+  username: postgres
+  password: code*03
