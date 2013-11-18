@@ -10,42 +10,53 @@ $darkColor: #E6AC27;//#655643 //brown;
 $mainWidth: 1200px;
 $catHeight: 528px; //(height of each li + 24 padding) * the number of li categories
 $difLevelHeight: 92px; //$catHeight / 3 - (12 padding per item)
-$shadow: #444;
+$shadow: #999;
+$orangeRed: #BF4D28;
 
 body{
 	background: url('/assets/backgrounds/tree_bark.png');
 //	background-color: $enhanceColor;
 }
 
-div.wrapper{
-	
-	div.inner-wrapper{
-		position: relative;
-		width: $mainWidth;
-		margin: 0px auto;
-		z-index: 10;
-	}
+div.inner-wrapper{
+	position: relative;
+	width: $mainWidth;
+	margin: 0px auto;
+	z-index: 8;
 }
 
 div.header-banner{
 	height: 8px;
-	background-color: #BF4D28;
-	position: relative;
-	z-index: 2;
+	background-color: $orangeRed;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	z-index: 10;
+
+	div.inner-wrapper{
+
+		#logo{
+			position: absolute;
+			left: -60px;
+			top: 0px;
+			height: 150px;
+		}
+	}
 }
 
 div.content{
 	float: left;
+	padding: 16px 0px;
 
-	#col1{
-		padding-left: 54px;
+	.col:first-child{
+		padding-left: 46px;
 	}
 
 	div.col{
 		width: 300px;
 		min-height: 700px;
 		text-align: center;
-		padding: 8px 0px;
 		float: left;
 
 		div.clip-wrapper{
@@ -69,7 +80,7 @@ div.content{
 				}
 
 				h1{
-					color: $secColor;
+					color: $orangeRed;
 					font-weight: bold;
 					font-size: 14px;
 					text-align: center;
@@ -143,9 +154,7 @@ ul.cat-holder-hor{
 	}
 
 	li.active{
-		border-right: 1px solid transparent;
 		background-color: $enhanceColor;
-		box-shadow: 1px 3px 3px #555;
 		box-shadow: -2px 2px 3px $shadow;
 		position: relative;
 	}
@@ -187,13 +196,6 @@ div.left-col{
 	position: fixed;
 //	background-image: url('/assets/backgrounds/billie_holiday.png');
 
-	#logo{
-		position: absolute;
-		left: -60px;
-		top: 0px;
-		height: 150px;
-	}
-
 	div.logo-wrapper{
 
 		div{
@@ -210,16 +212,27 @@ div.left-col{
 	div.go-left{
 
 		ul.levels{
+			padding-top: 160px;
+
 			li{
 
 				a{
 					padding: 36px 20px;
 					display: inline-block;
+
+					img{
+						height: 32px;
+						width: 32px;
+					}
 				}
 
 				a:hover{
 					background-color: transparent;
 				}
+			}
+
+			li.active{
+				background-color: $darkColor;
 			}
 		}
 
@@ -228,6 +241,7 @@ div.left-col{
 			padding-left: 16px;
 			box-shadow: -2px 2px 3px $shadow;
 			height: 806px;
+			padding-top: 100px;
 
 			li{
 
@@ -254,20 +268,12 @@ div.left-col{
 			}
 		}
 
-		ul.levels{
-			margin-top: 140px;
-
-			li{
-
-				img{
-					height: 32px;
-					width: 32px;
-				}
-			}
-
-			li.active{
-				background-color: $darkColor;
-			}
+		div.shadow-box{
+			height: 806px;
+			width: 2px;
+			background-color: white;
+			float: left;
+			box-shadow: -2px 2px 3px $shadow;
 		}
 
 	}
