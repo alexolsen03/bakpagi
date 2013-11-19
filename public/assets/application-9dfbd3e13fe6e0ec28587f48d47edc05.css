@@ -1,0 +1,318 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+
+
+ */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.clearme{
+	clear: both;
+}
+
+.go-left{
+	float: left;
+}
+
+.go-right{
+	float: right;
+}
+
+.right-bg{
+	position: fixed;
+    top: 0px;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    background-color: white; 
+    background-image: url('/assets/backgrounds/tree_bark.png'); 
+    z-index: 1;
+}
+body {
+  background: url("/assets/backgrounds/tree_bark.png"); }
+
+div.inner-wrapper {
+  position: relative;
+  width: 1200px;
+  margin: 0px auto;
+  z-index: 8; }
+
+div.header-banner {
+  height: 8px;
+  background-color: #bf4d28;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: 10; }
+  div.header-banner div.inner-wrapper #logo {
+    position: absolute;
+    left: -60px;
+    top: 0px;
+    height: 150px; }
+
+div.content {
+  float: left;
+  padding: 16px 0px; }
+  div.content .col:first-child {
+    padding-left: 46px;
+    border-left: 1px solid transparent; }
+  div.content div.col {
+    width: 300px;
+    min-height: 700px;
+    text-align: center;
+    float: left;
+    border-left: 1px dotted #e6e6e7; }
+    div.content div.col div.clip-wrapper {
+      display: inline-block;
+      background-color: #fff;
+      border-bottom: 1px solid #f5f5f5;
+      padding: 0px 16px; }
+      div.content div.col div.clip-wrapper div.clip-inner {
+        width: 196px;
+        text-align: center;
+        margin: 10px 0px; }
+        div.content div.col div.clip-wrapper div.clip-inner #ytplayer {
+          display: none; }
+        div.content div.col div.clip-wrapper div.clip-inner h1 {
+          color: #bf4d28;
+          font-weight: bold;
+          font-size: 14px;
+          text-align: center;
+          padding: 4px; }
+        div.content div.col div.clip-wrapper div.clip-inner img {
+          height: 90px; }
+        div.content div.col div.clip-wrapper div.clip-inner p {
+          padding: 4px;
+          color: #888888;
+          text-align: left;
+          font-size: 10pt;
+          font-family: Calibri; }
+        div.content div.col div.clip-wrapper div.clip-inner div.icon-holder {
+          text-align: right;
+          padding: 4px; }
+          div.content div.col div.clip-wrapper div.clip-inner div.icon-holder div.left-holder {
+            float: left; }
+            div.content div.col div.clip-wrapper div.clip-inner div.icon-holder div.left-holder img {
+              height: 16px;
+              width: 16px; }
+          div.content div.col div.clip-wrapper div.clip-inner div.icon-holder div.right-holder {
+            float: right; }
+            div.content div.col div.clip-wrapper div.clip-inner div.icon-holder div.right-holder img {
+              height: 16px;
+              width: 16px; }
+    div.content div.col div.clip-wrapper:hover {
+      cursor: pointer;
+      background-color: #f6f7bd; }
+
+ul.cat-holder-hor {
+  float: left; }
+  ul.cat-holder-hor li {
+    display: block;
+    text-align: center;
+    border-radius: 8px 0px 0px 8px; }
+    ul.cat-holder-hor li a img {
+      height: 28px;
+      width: 28px; }
+  ul.cat-holder-hor li.active {
+    background-color: white;
+    box-shadow: -2px 2px 3px #999999;
+    position: relative; }
+  ul.cat-holder-hor li:hover {
+    cursor: pointer; }
+
+div.left-wrapper {
+  width: 100px;
+  float: left; }
+  div.left-wrapper div.go-left ul li {
+    height: 92px;
+    line-height: 128px; }
+  div.left-wrapper div.go-left ul li.active {
+    background-color: #e6ac27; }
+  div.left-wrapper div.go-right ul {
+    background-color: #e6ac27; }
+
+div.left-col {
+  float: left;
+  position: fixed; }
+  div.left-col div.logo-wrapper div {
+    width: 69px;
+    height: 80px; }
+  div.left-col div.logo-wrapper div.brown-me {
+    background-color: #e6ac27;
+    box-shadow: -2px 2px 3px #999999; }
+  div.left-col div.go-left ul.levels {
+    padding-top: 160px; }
+    div.left-col div.go-left ul.levels li a {
+      padding: 36px 20px;
+      display: inline-block; }
+      div.left-col div.go-left ul.levels li a img {
+        height: 32px;
+        width: 32px; }
+    div.left-col div.go-left ul.levels li a:hover {
+      background-color: transparent; }
+    div.left-col div.go-left ul.levels li.active {
+      background-color: #e6ac27; }
+  div.left-col div.go-left ul.cats {
+    background-color: #e6ac27;
+    padding-left: 16px;
+    box-shadow: -2px 2px 3px #999999;
+    height: 806px;
+    padding-top: 100px; }
+    div.left-col div.go-left ul.cats li a {
+      padding: 18px 10px;
+      display: inline-block; }
+      div.left-col div.go-left ul.cats li a img {
+        height: 28px;
+        width: 28px; }
+    div.left-col div.go-left ul.cats li a:hover {
+      background-color: transparent; }
+    div.left-col div.go-left ul.cats li:active {
+      background-color: white;
+      box-shadow: -2px 2px 3px #999999;
+      position: relative; }
+  div.left-col div.go-left div.shadow-box {
+    height: 806px;
+    width: 2px;
+    background-color: white;
+    float: left;
+    box-shadow: -2px 2px 3px #999999; }
+
+div.right-col {
+  float: left;
+  background-color: white;
+  width: 1000px;
+  box-shadow: -2px 2px 3px #999999;
+  margin-left: 138px; }
+
+div.modal {
+  display: none;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 99; }
+
+div.modal-inner {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -240px;
+  margin-left: -426px;
+  width: 853px;
+  height: 480px;
+  background-color: white;
+  z-index: 100; }
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px; }
+
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px; }
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px; }
+
+a {
+  color: #000; }
+  a:visited {
+    color: #666; }
+  a:hover {
+    color: #fff;
+    background-color: #000; }
+
+div.field, div.actions {
+  margin-bottom: 10px; }
+
+#notice {
+  color: green; }
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table; }
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0; }
+  #error_explanation h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #c00;
+    color: #fff; }
+  #error_explanation ul li {
+    font-size: 12px;
+    list-style: square; }
