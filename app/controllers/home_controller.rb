@@ -1,13 +1,16 @@
 class HomeController < ApplicationController
 
   def index
-	set_clips
+	  set_clips
   	#respond_with(@clips.where(level: uLevel))
+    params[:uLevel] = 1
+    params[:uCat] = 1
+    refresh_clips
   end
 
   def refresh_clips
   	unless params[:uLevel].nil?
-  		puts 'CHANGING LEVEL TO ' + params[:uLevel]
+  		puts 'CHANGING LEVEL TO ' + params[:uLevel].to_s
   		@uLevel = params[:uLevel]
   	end
   	unless params[:uCat].nil?
@@ -15,12 +18,12 @@ class HomeController < ApplicationController
   	end
 
   	@clips = Clip.where(level: @uLevel)
- 	@clips = @clips.joins(:categories).where('categories.id' => @uCat)
- 	@clipsCount = @clips.count()
- 	puts 'controller count is: ' + @clipsCount.to_s
-  	respond_to do |format|
-  		format.js
-  	end
+ 	  @clips = @clips.joins(:categories).where('categories.id' => @uCat)
+ 	  @clipsCount = @clips.count()
+ 	  puts 'controller count is: ' + @clipsCount.to_s
+  	#respond_to do |format|
+  	#	format.js
+  	#end
   end
 
  private
